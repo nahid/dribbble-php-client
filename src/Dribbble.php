@@ -34,8 +34,8 @@ class Dribbble
     public function makeAuthLink($caption = 'Authentication', $scope = '', $state = null)
     {
         $state = !is_null($state)?md5($state):'';
-        return '<a href="https://dribbble.com/oauth/authorize
-?client_id='.$this->config->get('client_id').'&redirect_uri='.$this->config->get('redirect_uri').'&scope='. rawurlencode($scope).'&state='. $state. '">'.$caption.'</a>';
+        return 'https://dribbble.com/oauth/authorize
+?client_id='.$this->config->get('client_id').'&redirect_uri='.$this->config->get('redirect_uri').'&scope='. rawurlencode($scope).'&state='. $state;
     }
 
     public function getAccessToken()

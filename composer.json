@@ -21,6 +21,9 @@
     "autoload": {
     "psr-4": {
       "Nahid\\DribbbleClient\\": "src/"
-    }
+    },
+    "files":[
+        "src/helpers/dribbble.php"
+    ]
   }
 }
