@@ -1,6 +1,9 @@
 <?php
-namespace Nahid\StackApis\Facades;
+
+namespace Nahid\DribbbleClient\Facades;
+
 use Illuminate\Support\Facades\Facade;
+
 class Dribbble extends Facade
 {
     /**
