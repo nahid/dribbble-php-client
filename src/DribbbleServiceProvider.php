@@ -22,7 +22,7 @@ class DribbbleServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerStackApi();
+        $this->registerDribbbleClient();
 
     }
     /**
@@ -45,10 +45,10 @@ class DribbbleServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerStackApi()
+    protected function registerDribbbleClient()
     {
         $this->app->singleton('Dribbble', function (Container $app) {
-            return new StackApi($app['config']->get('dribbble'));
+            return new Dribbble($app['config']->get('dribbble'));
         });
     }
     /**
